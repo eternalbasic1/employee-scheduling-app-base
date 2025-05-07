@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-2 px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-blue-700;
+  }
+
+  .sidebar-link.active {
+    @apply bg-blue-900 text-white hover:bg-blue-800 hover:text-white;
+  }
+
+  .schedule-block {
+    @apply text-xs text-white font-medium px-2 py-1 rounded cursor-pointer;
+  }
+
+  .time-block-morning {
+    @apply bg-blue-500;
+  }
+
+  .time-block-afternoon {
+    @apply bg-green-500;
+  }
+
+  .time-block-evening {
+    @apply bg-yellow-500;
+  }
+
+  .time-block-night {
+    @apply bg-purple-500;
+  }
+}
+
+/* Table styles */
+.schedule-table {
+  @apply w-full border-collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  @apply border border-gray-200 p-2;
+}
+
+.schedule-table thead th {
+  @apply bg-gray-50 text-center text-xs font-semibold uppercase;
+}
+
+.schedule-table tbody th {
+  @apply bg-gray-50 text-left text-xs font-semibold;
+}
+
+.schedule-table .employee-cell {
+  @apply flex flex-col text-xs;
+}
+
+.schedule-table .employee-name {
+  @apply font-medium text-sm;
+}
+
+.schedule-table .employee-position {
+  @apply text-gray-500 text-xs;
+}
